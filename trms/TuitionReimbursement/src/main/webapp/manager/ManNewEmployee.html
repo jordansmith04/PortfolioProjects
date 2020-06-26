@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+<link href="pages.css" rel="stylesheet" type="text/css"/>
+<!--Including Bootstrap via a Content Delivery Network-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Playfair+Display&display=swap" rel="stylesheet"/>
+    </head>
+<!--header-->
+<header>
+    <!--Nav Bar-->
+<div class="navbar">
+	<a href="/ProjectOne/manager/ManNewEmployee.html" class="active">Create new account</a>
+    
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+    	<a href="/ProjectOne/manager/ManNewRequests.html" >New Request</a>
+       <a href="/ProjectOne/manager/ManUpdateInfo.html">Update Information</a>
+      <a href="/ProjectOne/manager/ManEmployeeTree.html">View Employee Tree</a>
+      <a href="/ProjectOne/manager/ManApproveRequests.html">Approve Requests</a>
+       <a href="/ProjectOne/manager/ManViewRequests.html">View Requests</a>
+      <a href="/ProjectOne/index.html" id="logout">Log Out</a>
+    </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+</header>
+<body>
+    <form class="form-group" method="post" action="/ProjectOne/NewEmployee">
+        <div>
+            <h1>Create new employee account</h1>
+          <br/>
+          <div id="form">
+           <label for="employeePassword" id="request-select" class="form-control">Enter desired username:</label>
+        	<br/>
+        <input type="text" name="username" id="request-select" class="form-control" placeholder="password?" required/>
+          <br/>
+        <label for="employeePassword" id="request-select" class="form-control">Enter desired password:</label>
+        	<br/>
+        <input type="text" name="employeePassword" id="request-select" class="form-control" placeholder="password?" required/>
+          <br/>
+        <label for="firstname" id="choice-selector" class="form-control">First name:</label>
+            <br/>
+       <input type="text" name="firstname" id="firstname" class="form-control" required/>
+            <br/>
+       <label for="lastname" id="choice-selector" class="form-control">Last name:</label>
+            <br/>
+       <input type="text" name="lastname" id="lastname" class="form-control" required/>
+            <br/>
+       <label for="isManager" id="choice-selector" class="form-control">Are they a manager?:</label>
+            <br/>
+       Yes<input type="radio" name="isManager" id="true" value="true" class="form-control"/>
+       No<input type="radio" name="isManager" id="false" value="false" class="form-control"/>
+            <br/>
+        <input id="submitbutton" type="button" value="submit" class="btn-dark form-control"/>
+        </div>
+        </div>
+    </form>
+     <script type="text/javascript" src="pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+<link href="pages.css" rel="stylesheet" type="text/css"/>
+<!--Including Bootstrap via a Content Delivery Network-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Playfair+Display&display=swap" rel="stylesheet"/>
+ <script src="pages.js"></script>
+    </head>
+<!--header-->
+<header>
+   <!--Nav Bar-->
+<div class="topnav">
+	<a href="/ProjectOne/manager/ManNewRequests.html" class="active">New Request</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+       <a href="/ProjectOne/manager/ManUpdateInfo.html">Update Information</a>
+      <a href="/ProjectOne/manager/ManEmployeeTree.html">View Employee Tree</a>
+      <a href="/ProjectOne/manager/ManApproveRequests.html">Approve Requests</a>
+      <a href="/ProjectOne/manager/ManNewEmployee.html">Create new account</a>
+       <a href="/ProjectOne/manager/ManViewRequests.html">View Requests</a>
+      <a id="logout">Log Out</a>
+    </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+</header>
+<body>
+<h1>New Request Form</h1>
+            <br/>
+    <form class="form-group" method="post" action="/ProjectOne/NewRequest">
+            <label for="amount" class="form-control" id="amount-label">Amount:</label>
+       		<input type="number" id="amount" name="amount" class="form-control" placeholder="Enter amount" required/>
+          <br/>
+          <label for="description" class="form-control" id="amount-label">Description:</label>
+        <input type="text" id="description" class="form-control" name="description" required placeholder="What's it for?"/>
+            <br/>
+        <input id = "submitbutton" type="submit" value="submit" class="btn-dark form-control"/>
+    </form>
+</body>
+</html>

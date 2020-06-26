@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+<link href="pages.css" rel="stylesheet" type="text/css"/>
+<!--Including Bootstrap via a Content Delivery Network-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Playfair+Display&display=swap" rel="stylesheet"/>
+</head>
+<!--header-->
+<header>
+<!--Nav Bar-->
+<div class="navbar">
+	<a href="/ProjectOne/employee/EmployeeUpdateInfo.html" class="active">Update Information</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+    <a href="/ProjectOne/employee/EmployeeNewRequests.html">New Request</a>
+       <a href="/ProjectOne/employee/EmployeeViewRequests.html">View Requests</a>
+      <a href="/ProjectOne/index.html" id="logout">Log Out</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</header>
+<body>
+	 <h1>Update Information</h1>
+            <br/>
+    <form method="post" action="/ProjectOne/UpdateInfo">
+        <div class="form-group">
+            <h1>Update Information</h1>
+            <br/>
+         <div id="form">
+          <label for="username">New user name:</label>
+        <input type="text" id="username" class="form-control" name="username" placeholder="(optional) enter new user name"/>
+          <br/>
+          <label for="username">Current user name:</label>
+        <input type="text" id="oldusername" class="form-control" name="oldusername" placeholder="(optional) enter current name"/>
+          <br/>
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" class="form-control" name="firstname" placeholder="(optional)Enter your first name" />
+          <br/>
+        <label for="lastname">Last name:</label>
+         <input type="text" id="lastname" class="form-control" name="lastname" placeholder="(optional)Enter your last name" required/>
+         <br/>
+         <label for="password">Enter new password (optional): </label>
+         <input type="password" id="employeePassword" class="form-control" name="password" placeholder="(optional) enter new password" required/>
+        <input id = "submitbutton" type="button" value="submit" class="btn-dark form-control"/>         
+        </div>
+        </div>
+    </form>
+     <script type="text/javascript" src="pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+<link href="pages.css" rel="stylesheet" type="text/css"/>
+<!--Including Bootstrap via a Content Delivery Network-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Playfair+Display&display=swap" rel="stylesheet"/>
+<script type="text/javascript" src="pages.js"></script>
+    </head>
+<!--header-->
+<header>
+    <!--Nav Bar-->
+<div class="navbar">
+    <a href="/ProjectOne/employee/EmployeeViewRequests.html" class="active">View Requests</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+    <a href="/ProjectOne/employee/EmployeeNewRequests.html">New Request</a>
+      <a href="/ProjectOne/employee/EmployeeUpdateInfo.html">Update Information</a>
+      <a href="/ProjectOne/index.html" id="logout">Log Out</a>
+    </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+</header>
+<body>
+    <form>
+        <div class="form-group">
+            <h1>View Your Requests</h1>     
+          <br/>
+          <h2>Pending Requests</h2>
+          <div id="pending-requests3">
+          </div>
+          <br/>
+          <h2>Approved Requests</h2>
+          <div id="approved-requests">
+          </div>
+          <br/>
+  			<button id="exit-button" type="button" class="btn-dark form-control" onClick="getPendingRequests3()">View Pending Requests</button>
+  			<button id="exits-button" type="button" class="btn-dark form-control" onClick="getApprovedRequests()">View Approved Requests</button>
+        </div>
+    </form>
+</body>
+</html>

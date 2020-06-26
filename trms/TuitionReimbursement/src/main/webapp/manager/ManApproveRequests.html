@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+<link href="pages.css" rel="stylesheet" type="text/css"/>
+<!--Including Bootstrap via a Content Delivery Network-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Playfair+Display&display=swap" rel="stylesheet"/>
+<script type="text/javascript" src="pages.js"></script>
+</head>
+<!--header-->
+<header>
+<!--Nav Bar-->
+<div class="navbar">
+     <a href="ManApproveRequests.html"  class="active">Approve Requests</a>
+    
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+    	<a href="/ProjectOne/manager/ManNewRequests.html" >New Request</a>
+       <a href="/ProjectOne/manager/ManUpdateInfo.html">Update Information</a>
+      <a href="/ProjectOne/manager/ManNewEmployee.html" >Create new account</a>
+      <a href="/ProjectOne/manager/ManEmployeeTree.html">View Employee Tree</a>
+       <a href="/ProjectOne/manager/ManViewRequests.html">View Requests</a>
+      <a href="/ProjectOne/index.html" id="logout">Log Out</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onClick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</header>
+<body>
+<div id=approval-selector>
+    <h1>Approve/Deny Requests</h1>
+    <h2>Pending</h2>
+    <table id="pending-requests1">
+   </table>
+    <form class="form-group" method="post" action="/ProjectOne/ApproveOrDenyRequests">
+        <div id="form">
+        <label for="selector" id="request-num" class="form-control">Enter Request Number:</label>
+        <input type="number" id="employee-num-selector" name="requestNumber" class="form-control"/>
+        <br/>
+        <label for="selector" id="decision" class="form-control">Approve</label>
+        <input type="radio" name="selector" value="true" class="form-control"/>
+        <label for="selector" id="decision" class="form-control">Deny</label>
+        <input type="radio" name="selector" value="false" class="form-control"/>
+        <br/>
+        <input id="get-button" type="button" value="Get Pending Requests" class="btn-dark form-control" onClick="getPendingRequests1()"/>
+        <input id="approve-button" type="submit" value="submit" class="btn-dark form-control"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>

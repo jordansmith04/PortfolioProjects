@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+<link href="pages.css" rel="stylesheet" type="text/css"/>
+<!--Including Bootstrap via a Content Delivery Network-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Playfair+Display&display=swap" rel="stylesheet"/>
+  <script type="text/javascript" src="pages.js"></script>
+    </head>
+<!--header-->
+<header>
+   <!--Nav Bar-->
+<div class="topnav">
+	<a href="/ProjectOne/employee/EmployeeNewRequests.html" class="active">New Request</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+       <a href="/ProjectOne/employee/EmployeeUpdateInfo.html">Update Information</a>
+       <a href="/ProjectOne/employee/EmployeeViewRequests.html">View Requests</a>
+      <a href="/ProjectOne/index.html" id="logout">Log Out</a>
+    </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+</header>
+<body>
+    <form class="form-group" method="post" action="/ProjectOne/NewRequest">
+        <div>
+            <h1>New Request Form</h1>
+            <br/>
+            <label for="amount" class="form-control" id="amount-label">Amount:</label>
+       		<input type="number" id="amount" name="amount" class="form-control" placeholder="Enter amount" required/>
+          <br/>
+          <label for="description" class="form-control" id="amount-label">Description:</label>
+        <input type="text" id="description" name="description" class="form-control" required placeholder="What's it for?"/>
+            <br/>
+        <input id = "submit-button" type="button" value="submit" class="btn-dark form-control"/>
+        </div>
+    </form>
+   
+</body>
+</html>
