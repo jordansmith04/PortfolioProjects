@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- You must specify that the DOCTYPE is a hibernate configuration document and then provide a link to the DTD
+which defines the valid elements of a hibernate configuration file. -->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        
+<!-- The root tag of a hibernate configuration file is: -->
+<hibernate-configuration>
+	<!-- We configure of database connection properties within our session factory! -->
+	<session-factory>
+	<!-- Specify your Driver class (based on the SQL driver you're using!) -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<!-- What dialect of SQL are we using? -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<!-- Configure our DB url, username, and password. -->
+		<property name="hibernate.connection.url">jdbc:postgresql://projecttwodb.cmspzoonoz9m.us-east-2.rds.amazonaws.com:5432/projecttwodb</property>
+		<property name="hibernate.connection.username">admin1</property>
+		<property name="hibernate.connection.password">administrator1</property>
+		<!-- This determines how many connections a single user is allowed to a DB. Having several connections
+		speeds up the database process for a user, but it also eats up all available connections you have for a 
+		database much more quickly. -->
+		<property name="hibernate.connection.pool_size">5</property>
+		<!-- Simply writes all of the generated SQL Hibernate is using to the console. -->
+		<property name="show_sql">true</property>
+		<!-- This property defines how Hibernate sessions are handled. In this case, sessions are tracked by their 
+		thread of execution. -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		<!-- This property tells Hibernate how to handle your DB. It can be in one of four states: CREATE: Hibernate
+		will purge the existing database and create it from scratch. UPDATE: Hibernate connects to the existing
+		DB and interacts with it without removing current data. VALIDATE: Hibernate will validate pre-existing 
+		schema before updating the schema. CREATE-DROP: Purges existing tables and creates them from scratch. Then,
+		when the server is shut down, it purges the data again. NOTE: You should not run Hibernate in CREATE
+		mode in production. -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- If you're wanting to include L2 caching, you'll need to add the following properties. -->
+	<!-- <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+		<property name="hibernate.cache.use_second_level_cache">true</property> -->
+		<!-- Though there are two levels of caching in Hibernate, there is technically a third level called "query
+		cache". However, all it does is cache HQL query results, so it is not considered alongside L1 and L2 caching. -->
+		<!-- This tells Hibernate which classes to scan for annotations. -->
+		<mapping class="com.revature.models.Userinfo"/>
+		<!-- <mapping resource ="polkaowner.hbm.xml"/> --> <!-- This is an hbm file that we're telling the Configuration class to use. -->
+		<mapping class="com.revature.models.Exercises"/>
+		<mapping class="com.revature.models.Futureworkouts"/>
+		<mapping class="com.revature.models.Pastworkouts"/>
+		<mapping class="com.revature.models.Workouts"/>
+	</session-factory>
+</hibernate-configuration>

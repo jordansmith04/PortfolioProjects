@@ -1,0 +1,107 @@
+<h1>Abs
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        pre-created workouts
+      </button>
+</h1>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        
+        <th scope="col">exercise</th>
+        <th scope="col">calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+      
+        <td>Sit-ups</td>
+        <td>5 per rep</td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>Crunches</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>Twists</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope ="row"></th>
+        <td>Leg raises</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope ="row"></th>
+        <td>Toe touches</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope ="row"></th>
+        <td>Heel touches</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope = "row"></th>
+        <td>Side Plank</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope = "row"></th>
+        <td>Side Plank with rotation</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope = "row"></th>
+        <td>Scissors</td>
+        <td>2 per rep</td>
+      </tr>
+    </tbody>
+  </table>
+   <!-- Modal -->
+<div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">example workout</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+           <table class ="table table-bordered table-dark">
+            <thead>
+              <tr>
+                <th scope="col">exercise</th>
+                <th scope="col">Calories</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Side Plank</td>
+                <td>2 per rep</td>
+              </tr>
+              <tr>
+                  <td>Side Plank with rotation</td>
+                  <td>per rep</td>
+              </tr>
+              <tr>
+                <td>Crunches</td>
+                <td>2 per rep</td>
+              </tr>
+              <tr>
+                <td>sit-ups</td>
+                <td>2 per rep</td>
+              </tr>
+           </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button (click)='addAbs()' type="button" class="btn btn-primary">Save to Future Workouts!</button>
+        </div>
+      </div>
+    </div>
+  </div>

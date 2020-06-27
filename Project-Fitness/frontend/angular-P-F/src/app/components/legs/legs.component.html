@@ -1,0 +1,122 @@
+<h1>Legs
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    pre-created workouts
+  </button>
+</h1>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        
+        <th scope="col">exercise</th>
+        <th scope="col">calories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+      
+        <td>Squats</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>Forward Lunges</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>Calf raises</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope ="row"></th>
+        <td>One-legged Squats</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope ="row"></th>
+        <td>Body-weight bridge</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope ="row"></th>
+        <td>Bodyweight Single Leg Deadlift</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope = "row"></th>
+        <td>Bodyweight Y squats</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope = "row"></th>
+        <td>Lateral squats</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope = "row"></th>
+        <td>Static lunge</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope ="row"></th>  
+        <td>Yoga Squats</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope ="row"></th>
+        <td>Cossacks</td>
+        <td>2 per rep</td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td>High knees</td>
+        <td>1 per rep</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">example workout</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <table class ="table table-bordered table-dark">
+          <thead>
+            <tr>
+              <th scope="col">exercise</th>
+              <th scope="col">Calories</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>High knees</td>
+              <td>2 per rep</td>
+            </tr>
+            <tr>
+              <td>Forward Lunges</td>
+              <td>2 per rep</td>
+            </tr>
+            <tr>
+              <td>Squars</td>
+              <td>2 per rep</td>
+            </tr>
+            <tr>
+              <td>One-legged squats</td>
+              <td>2 per rep</td>
+            </tr>
+         </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button (click)="addLeg()" type="button" class="btn btn-primary">Save to Future Workout!</button>
+      </div>
+    </div>
+  </div>
+</div>
